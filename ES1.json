@@ -1,0 +1,68 @@
+//1//
+const num=20.32;
+console.log(num)
+
+//2//
+function greet(name){
+    if(name=="ross"){
+        let greetme="Hello there";
+        console.log(greetme);
+    }
+}
+greet("ross")
+//3//
+
+function greet(name){
+    if(name=="ross"){
+        let greetme="Hello there";
+        console.log(greetme);
+    }
+}
+greet("ross")
+//4//
+const names=['Tom','Ivan','Jerry'];
+console.log(names.map(name=>({"string":name,"string_length":name.length})));
+//5//
+let add=function(a=2,b=3){
+    console.log(a+b);
+};
+add();
+
+let userFriends=function(username,...user_friends){
+    console.log(username);
+    console.log(user_friends);
+}
+let username="Ross"
+userFriends(username,'Rachel','Chandler','Joey');
+
+let printCapitalName=function(...names){
+    for(let name of names){
+        console.log(name.toUppercase());
+    }
+}
+printCapitalName("ross","rachel","chandler","monica");
+
+//6//
+
+let model=7511;
+let desk_no=4;
+let my_name="Ross";
+console.log(`The laptop model no:${model}
+            the desk no:${desk_no}
+             Name of the owner:${my_name}`);
+//7//
+let emp=['Ross','Rachel','Joey','Chandler'];
+let [emp1,emp2,emp3,emp4] = emp;
+console.log(emp3);
+
+let org={
+    "name":"Ross",
+    "address":{
+        "city":"Mumbai",
+        "pincode":"400095"
+    }
+};
+console.log(org.address.pincode);
+
+//8//
+

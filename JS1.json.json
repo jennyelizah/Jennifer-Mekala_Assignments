@@ -1,0 +1,236 @@
+/*q1*/
+<script>
+var num=parseInt(prompt("enter a number:"));
+sum=0,i=1;
+while(i<=num){
+    sum += i;
+    i++;
+}
+      document.write(sum)     
+        </script>
+
+//q2//
+<script>
+var num=parseInt(prompt("Enter the number:"));
+sum=0,i=1;
+while(i<=num){
+    if(i%3==0 || i%5==0){
+        sum +=i;
+    }
+    i++
+}
+    document.write(sum)
+</script>
+
+//q3//
+<script>
+            var num=parseInt(prompt("enter a number"))
+            function parity(a){
+                if(a%2==0){
+                    document.write('It is a even number');
+                }
+                else{
+                    document.write('It is a odd number');
+                }
+
+            }
+            parity(num);
+        </script>
+
+//q4//
+<script>
+            var n= parseInt(prompt("Enter the number of flips: "));
+            function headRatio(){
+                return Math.floor(Math.random()*2) ? "Heads":"Tails";    
+            };
+            var counthead=0;
+            for(i=0;i<n;i++) {
+                if (headratio()=="Heads"){
+                    counthead++;
+                    };
+                };
+                document.write(counthead/n);
+        </script>
+
+//q5//
+leapyear();
+            function leapyear(){
+                var currentyr=2021;
+            var leapyr=0;
+                while(leapyr<20){
+                    if((currentyr % 4==0)&&(currentyr%100 !=0)|| (currentyr%400==0)){
+                        document.write(currentyr+" "+"<br>");
+                        leapyr++;
+                    }
+                    
+                        currentyr++;
+                }
+
+            };
+        </script>
+
+//q6//
+<script>
+       myArr();
+       function myArr(){
+           var input=prompt("Enter your string");
+           var newstr= input.split(" ");
+           for(var i=1;i<=newstr.length+6;i++){
+               document.write("*");
+           }
+           document.write("<br>")
+         
+           for (var i=0;i<=newstr.length;i++){
+               document.write("*"+newstr[i]+"*"+"<br>");
+           }
+      for(var i=1;i<=newstr.length+6;i++){
+               document.write("*");
+           }
+       }
+
+    </script>
+
+//q7//
+<script>
+currency();
+function currency(){
+var value=prompt("Enter the value in dollars");
+document.write((value*74.28)+"INR <br>"+(value*109.14)+"Yen <br>"+(value*0.84)+"Euro <br>"+(value*0.72)+"Pound<br>");
+}
+
+
+
+</script>
+
+//q8/
+<script>
+arr();
+function arr(){
+var Arr1=[1,2,3];
+var Arr2=["a","b","c"];
+document.write(Arr1.concat(Arr2));
+}
+</script>
+
+//q9//
+<script>
+            mixArr();
+            function mixArr(){
+                var str1=[1,2,3];
+                var str2=['a','b','c'];
+                var str=[];
+                var j=0;var k=0;
+                for (i=0;i<str1.length+str2.length;i++){
+                    if(i%2==0){
+                        str[i]=str1[j];
+                        j++;
+                    }
+                    else{
+                        str[i]=str2[k];
+                        k++;
+                    }
+                   
+                }
+                document.write(str);
+            }
+        </script>
+//q10//
+fibo();
+function fibo(){
+    var a=1;
+    var b=1;
+    for (i=1;i<=100;i++){
+        var c=a+b;
+        a=b;
+        b=c;
+        document.write(a+"<br>")
+    }
+}
+</script>
+//q11//
+<script>
+var myArr=[1,2,3,4,5,6];
+myArr.reverse();
+document.write(myArr);
+</script>
+
+//q13//
+<script>
+var myArr=[1,2,3,4,5];
+sum=0;
+sum1=0;
+sum2=0;
+loop();
+function loop(){
+for(i=0;i<myArr.length;i++){
+    sum = sum+myArr[i];
+}
+document.write(sum+"<br>");
+i=0;
+while(i<myArr.length) {
+    sum1 += myArr[i]
+    i++  
+}
+document.write(sum1+"<br>")
+n=0;
+do{
+    sum2+= myArr[n]
+    n++
+}
+while
+    (n<myArr.length);
+    document.write(sum2);
+}
+</script>
+
+//q14//
+<script>
+numbers();
+function numbers(){
+    var myArr=[1,2,5,7,765,567,890,111,342,0,89];
+    document.write(myArr+"<br>");
+    var max=Math.max(...myArr);
+    var min=Math.min(...myArr);
+    var even=0;
+    var odd=0;
+    var sum=0;
+    var avg=0;
+    for(i=0;i<myArr.length;i++){
+        sum+=myArr[i];
+        if(myArr[i]%2==0){
+            even++;
+        }
+        else{
+            odd++;
+        }
+    }
+    avg= sum/myArr.length;
+document.write(max+"<br>"+min+"<br>"+even+"<br>"+odd+"<br>"+sum+"<br>"+avg);
+}
+</script>
+
+//q17//
+<script>
+            var a=[2,3,6,8,7,4,5];
+            n=a.length;
+            function leftRotate(a,k,n){
+                for(i=0;i<k;i++){
+                    leftRotate_one(a,n);
+                }
+                console.log(a)
+            }
+            function leftRotate_one(a,n){
+                var temp;
+                temp=a[0];
+            for(i=0;i<n-1;i++){
+                a[i]=a[i+1];
+                a[n-1]=temp;
+            }
+            };
+        leftRotate(a,5,n);
+        console.log(a)
+        </script>
+
+//q19//
+
+

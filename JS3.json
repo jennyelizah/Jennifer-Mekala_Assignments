@@ -1,0 +1,139 @@
+//Q1//
+<script>
+            class Rectangle{
+                constructor(height,width){
+                    this.height=height;
+                    this.width=width;
+                };
+            }
+            var R1=new Rectangle(20,30);
+            document.write(R1.height+"<br>"+R1.width);
+
+            </script>
+
+//Q2//
+<script>
+            class Rectangle{
+                constructor(height,width){
+                    this.height=height;
+                    this.width=width;
+                    this.getArea=function()
+                    {
+                        document.write(this.height*this.width)
+                    }
+                };
+            }
+            var R1=new Rectangle(20,30);
+            document.write(R1.height+"<br>"+R1.width+"<br>");
+            R1.getArea()
+
+//Q4//
+<script>
+class Person{}
+var P1=new Person();
+P1.firstname="Milo";
+P1.lastname="Andrews";
+document.write(P1.firstname);
+</script>
+
+//Q5//
+<script>
+class Person{}
+var P1=new Person();
+P1.firstname="Milo";
+P1.middlename="John";
+P1.lastname="Andrews";
+document.write(P1.middlename);
+</script>
+
+//Q6//
+<script>
+var str='({"firstname":"Milo","lastname":"Andrews"})';
+var obj=eval(str);
+document.write(obj.firstname+"<br>"+obj.lastname);
+</script>
+
+//Q7//
+<script>
+var str='{"firstname":"Milo","lastname":"Andrews"}';
+var obj=JSON.parse(str);
+document.write(obj.firstname+"<br>"+obj.lastname);
+</script>
+
+<script>
+function person(fname,lname,age,skills,dateofbirth,address,married,profession){
+    this.fname=fname;
+    this.lname=lname;
+    this.age=age;
+    this.skills=skills;
+    this.dateofbirth=dateofbirth;
+    this.address=address;
+    this.married=married;
+    this.profession=profession;
+}
+var person1=new person("nikhil","goud",22,["c"],"24/10/1996",{"city":"hyderabad","pincode":"521185"},"false","sr analyst");
+var person2=new person("harish","chinna",21,["HTML"],"08/06/1997",{"city":"Ameerpet","pincode":"500038"},"false","jr analyst");
+print=function()
+{
+    console.log(person1);
+    console.log(person2);
+}();
+
+amitabh=new person("amitabh","bachan",22,["c"],"24/10/1996",{"city":"hyderabad","pincode":"521185"},"false","sr analyst");
+abhishek=new person("abhishek",21,["HTML"],"08/06/1997","false","jr analyst");
+var abhishek=Object.create(amitabh);
+Aaradhya=new person("Aaradhya",20,["Java"],"05/05/2004","junior");
+var Aaradhya=Object.create(amitabh,abhishek);
+print=function(){
+    console.log(amitabh);
+    console.log(abhishek.lname);
+    console.log(abhishek.address);
+    console.log(Aaradhya);
+}();
+</script>
+
+<script>
+class BankAccount{
+    constructor(accountNumber,accountHolderName,accountBalance){
+        this.accountNumber=accountNumber;
+        this.accountHolderName=accountHolderName;
+        this.accountBalance=accountBalance;
+        this.getCurrentBal=function(){
+            console.log(this.accountBalance);
+        };
+    }
+}
+
+class Saving extends BankAccount{
+    constructor(accountNumber,accountHolderName,accountBalance,isSalary){
+            super(accountNumber,accountHolderName,accountBalance);
+            this.isSalary=isSalary;
+            this.withDraw=function(amount){
+                this.accountBalance -= amount;
+                if(accountBalance==0){
+                    return 1;
+                };
+            }
+    }
+}
+
+class Current extends BankAccount{
+    constructor(accountNumber,accountHolderName,accountBalance,odlimit){
+        super(accountNumber,accountHolderName,accountBalance);
+            this.odlimit=odlimit;
+            this.withDraw=function(amount){
+                this.accountBalance -= amount;
+            if(accountBalance < 0){
+                return 1;
+            };
+        }
+    }
+}
+obj1= new Saving(5111198,"Rema",350000,250);
+obj1.withDraw(500);
+obj1.getCurrentBal();
+obj2= new Current(5111199,"Hemant",35000,150);
+obj2.withDraw(600);
+obj2.getCurrentBal();
+
+</script>

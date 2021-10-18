@@ -1,0 +1,136 @@
+<script>
+var n=prompt("Enter the value:")
+function composedValue(f1,f2,f3){
+var value=f1(f2(n));
+document.write(value)
+}
+function square(n){
+    return n*n;
+}
+function doublt(n){
+    return n*2;
+}
+composedValue(square,doublt,n);
+
+</script>
+
+//q2//
+<script>
+var n=prompt("enter number");
+function composedValue(f1,f2){
+    function newFun(n){
+        return f1(f2(n));
+    }
+    var value=newFun(n)
+        document.write(value);
+    
+}
+    function square(n){
+        return n*n;
+    }
+    function double(n){
+        return n*n;
+    }
+    composedValue(square,double);
+
+</script>
+
+//q3//
+<script>
+            var a=[2,4,3]
+            find(a,test);
+            function find(a,test) 
+            {
+                for (i=0;i<a.length;i++) 
+                {
+                    if(test(a[i])==true)
+                     {
+                        document.write(a[i]);
+                        break;
+                    }
+                }
+            }
+
+            function test(n){
+                if (n%2==0){
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
+
+        </script>
+
+//q4//
+<script>
+var a=[3,2,4];
+function map(v,f1){
+    var b=[];
+    for(i=0;i<v.length;i++)
+        b.push(f1(v[i]));
+        document.write(b);
+    
+}
+    function square(n){
+        return (n*n);
+    }
+map(a,square);
+</script>
+
+//q5//
+<script>
+        var a=[2,3,1];
+
+        find(a);
+        function find(a){
+            i=0;
+            if (test(a[i])==true){
+                document.write(a[i]);
+                return 1;
+            }
+            else{
+                i++;
+                find(a);
+            }
+        }
+        function test(n){
+            if(n%2==0){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+
+
+    </script>
+
+    //q6//
+    <script>
+var a=[2,3,4];
+function map(a){
+    var b=[];
+    i=0;
+    if(i==a.length){
+        return;
+    }
+    else{
+        b.push(f1(a[i]));
+        i++;
+    map(a);
+    };
+    document.write(b);
+}
+function f1(n){
+    return n*n;
+};
+        </script>
+
+//q7//
+<script>
+function square(x){
+    return x*x;
+}
+document.write("square is "+square);
+   </script>
